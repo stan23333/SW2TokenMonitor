@@ -1,0 +1,7 @@
+{
+  "name": "token-monitor",
+  "version": "1.0.0",
+  "description": "OpenChamber to SW2 Token Monitor Sync Plugin",
+  "main": "index.js",
+  "type": "module"
+}

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="352" viewBox="0 0 220 176">
+  
+    <defs>
+      <filter id="glow-synthwave" x="-20%" y="-20%" width="140%" height="140%">
+        <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#00F0FF" flood-opacity="0.5"/>
+      </filter>
+    </defs>
+  <!-- Screen Background -->
+  <rect width="220" height="176" fill="#0D091A" rx="4"/>
+  
+  <!-- Header Row -->
+  <text x="8" y="15" fill="#FF007F" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10.5" font-weight="900" letter-spacing="0.6">OPENCHAMBER</text>
+  <circle cx="178" cy="12" r="3" fill="#00F0FF"/>
+  <text x="185" y="15" fill="#00F0FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="10" font-weight="800">WIFI</text>
+  
+  <line x1="8" y1="20" x2="212" y2="20" stroke="#FF007F" stroke-width="1.2" stroke-opacity="0.8"/>
+  
+  <!-- Model & Period Tag -->
+  <text x="8" y="37" fill="#B388FF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="12.5" font-weight="700">Claude 3.5 Sonnet</text>
+  <rect x="172" y="27" width="40" height="13" rx="3" fill="rgba(255, 0, 127, 0.25)"/>
+  <text x="192" y="37" text-anchor="middle" fill="#FF007F" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="8.5" font-weight="800" letter-spacing="0.5">TODAY</text>
+  
+  <!-- Hero Metric Token Number -->
+  <text x="8" y="70" fill="#00F0FF" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="28" font-weight="800" letter-spacing="-0.5" filter="url(#glow-synthwave)">2,410.5<tspan font-size="14" font-weight="600" fill="#B388FF"> K</tspan></text>
+  
+  <!-- 4-Box Telemetry Grid Container -->
+  <rect x="8" y="79" width="204" height="66" rx="6" fill="#19122C" stroke="#3A2754" stroke-width="1"/>
+  <line x1="110" y1="79" x2="110" y2="145" stroke="#3A2754" stroke-width="1"/>
+  <line x1="8" y1="112" x2="212" y2="112" stroke="#3A2754" stroke-width="1"/>
+  
+  <!-- Cell 1: IN -->
+  <text x="14" y="94" fill="#8E95A5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="700">INPUT</text>
+  <text x="14" y="107" fill="#00F0FF" font-family="ui-monospace, monospace" font-size="13" font-weight="800">2.35M</text>
+  
+  <!-- Cell 2: OUT -->
+  <text x="116" y="94" fill="#8E95A5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="700">OUTPUT</text>
+  <text x="116" y="107" fill="#FF007F" font-family="ui-monospace, monospace" font-size="13" font-weight="800">60.5K</text>
+  
+  <!-- Cell 3: CACHE -->
+  <text x="14" y="126" fill="#8E95A5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="700">CACHE READ</text>
+  <text x="14" y="140" fill="#B388FF" font-family="ui-monospace, monospace" font-size="13" font-weight="800">18.2M</text>
+  
+  <!-- Cell 4: COST -->
+  <text x="116" y="126" fill="#8E95A5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="9" font-weight="700">EST. COST</text>
+  <text x="116" y="140" fill="#FFD666" font-family="ui-monospace, monospace" font-size="13" font-weight="800">$3.48</text>
+  
+  <!-- Footer (IP & Sync Timestamp) -->
+  <text x="8" y="163" fill="#8C72B2" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600">192.168.0.11</text>
+  <text x="212" y="163" text-anchor="end" fill="#8C72B2" font-family="ui-monospace, monospace" font-size="9.5" font-weight="600">SYNC 01:05:42</text>
+</svg>

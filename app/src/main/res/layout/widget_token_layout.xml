@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/bg_widget_box"
+    android:padding="16dp">
+
+    <!-- Header: 标题与时间 (Material You 风格) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="6dp">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@mipmap/ic_launcher"
+            android:contentDescription="icon" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" OPENCHAMBER"
+            android:textColor="#FFE6E1E5"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.04" />
+
+        <TextView
+            android:id="@+id/widget_tv_sync_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:50"
+            android:textColor="#FFCAC4D0"
+            android:textSize="11sp" />
+    </LinearLayout>
+
+    <!-- 第二行: 当前模型名称与今日标签 (M3 Tonal Chip) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="4dp">
+
+        <TextView
+            android:id="@+id/widget_tv_model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Gemini 3.8 Flash"
+            android:textColor="#FFD0BCFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:singleLine="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TODAY"
+            android:background="@drawable/bg_chip_m3"
+            android:textColor="#FFE8DEF8"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="2dp"
+            android:textSize="10sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 第三行: Token 消耗大字 (Material You 纯粹大字) -->
+    <TextView
+        android:id="@+id/widget_tv_tokens"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3,338.8 K"
+        android:textColor="#FFE6E1E5"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="10dp" />
+
+    <!-- 第四行: 四宫格微型数据面板 (M3 Surface Card 胶囊风格) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_stat_badge"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="4dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="INPUT"
+                android:textColor="#FFCAC4D0"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/widget_tv_input"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3.29M"
+                android:textColor="#FFD0BCFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_stat_badge"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="4dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OUTPUT"
+                android:textColor="#FFCAC4D0"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/widget_tv_output"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="41.5K"
+                android:textColor="#FFFFB4AB"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_stat_badge"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="4dp"
+            android:layout_marginEnd="5dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CACHE"
+                android:textColor="#FFCAC4D0"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/widget_tv_cache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="33.5M"
+                android:textColor="#FFA8EBB2"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_stat_badge"
+            android:paddingVertical="6dp"
+            android:paddingHorizontal="4dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="COST"
+                android:textColor="#FFCAC4D0"
+                android:textSize="9sp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/widget_tv_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$0.00"
+                android:textColor="#FFFFDCC1"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

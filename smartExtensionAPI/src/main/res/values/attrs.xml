@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TimeView">
+        <attr name="textSize" format="dimension" />
+        <attr name="timeType" format="enum">
+            <enum name="time" value="0" />
+            <enum name="date" value="1" />
+            <enum name="am_pm" value="2" />
+        </attr>
+        <attr name="template" format="string" />
+        <attr name="fontPath" format="string" />
+        <attr name="textArray" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="TimeLayout">
+        <attr name="gravity" format="integer" />
+        <attr name="timeOffset" format="integer" />
+    </declare-styleable>
+</resources>

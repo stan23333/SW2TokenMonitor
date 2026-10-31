@@ -1,0 +1,11 @@
+<resources>
+    <color name="black">#FF121212</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="teal_700">#FF009688</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="bg_dark">#FF121316</color>
+    <color name="card_bg">#FF1E2128</color>
+    <color name="accent_blue">#FF00D2FF</color>
+    <color name="accent_green">#FF58FFB1</color>
+    <color name="text_muted">#FFA0A5B0</color>
+</resources>

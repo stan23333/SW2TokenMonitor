@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">SW2 Token Monitor</string>
+    <string name="extension_name">Token Monitor</string>
+    <string name="configuration_text">SW2 AOD Token Monitor Configuration</string>
+</resources>

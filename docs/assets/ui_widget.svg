@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="340" viewBox="0 0 600 340">
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+  
+  <!-- Outer M3 Card Container -->
+  <rect x="20" y="20" width="560" height="300" rx="44" fill="#1D1B20" stroke="#36343B" stroke-width="2" filter="url(#shadow)"/>
+  
+  <!-- Header row -->
+  <g transform="translate(56, 54)">
+    <circle cx="14" cy="14" r="14" fill="#D0BCFF"/>
+    <path d="M7 14 L12 19 L21 9" stroke="#1D1B20" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="40" y="20" fill="#E6E1E5" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="19" font-weight="800" letter-spacing="1">OPENCHAMBER</text>
+    <text x="470" y="20" text-anchor="end" fill="#CAC4D0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="16" font-weight="600">00:52</text>
+  </g>
+
+  <!-- Model Title and Chip -->
+  <g transform="translate(56, 102)">
+    <text x="0" y="24" fill="#D0BCFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="700">Gemini 3.8 Flash</text>
+    <rect x="400" y="4" width="70" height="26" rx="10" fill="#4A4458"/>
+    <text x="435" y="22" text-anchor="middle" fill="#E8DEF8" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="12" font-weight="800" letter-spacing="1">TODAY</text>
+  </g>
+
+  <!-- Main Metric Hero Tokens -->
+  <g transform="translate(56, 178)">
+    <text x="0" y="0" fill="#E6E1E5" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="52" font-weight="800">3,338.8<tspan font-size="26" font-weight="600" fill="#CAC4D0"> K</tspan></text>
+  </g>
+
+  <!-- M3 Grid 4 Pill Containers -->
+  <!-- Card 1: Input -->
+  <g transform="translate(56, 206)">
+    <rect x="0" y="0" width="108" height="74" rx="22" fill="#2B2930"/>
+    <text x="54" y="28" text-anchor="middle" fill="#CAC4D0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">INPUT</text>
+    <text x="54" y="54" text-anchor="middle" fill="#D0BCFF" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="800">3.29M</text>
+  </g>
+
+  <!-- Card 2: Output -->
+  <g transform="translate(180, 206)">
+    <rect x="0" y="0" width="108" height="74" rx="22" fill="#2B2930"/>
+    <text x="54" y="28" text-anchor="middle" fill="#CAC4D0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">OUTPUT</text>
+    <text x="54" y="54" text-anchor="middle" fill="#FFB4AB" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="800">41.5K</text>
+  </g>
+
+  <!-- Card 3: Cache -->
+  <g transform="translate(304, 206)">
+    <rect x="0" y="0" width="108" height="74" rx="22" fill="#2B2930"/>
+    <text x="54" y="28" text-anchor="middle" fill="#CAC4D0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">CACHE</text>
+    <text x="54" y="54" text-anchor="middle" fill="#A8EBB2" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="800">33.5M</text>
+  </g>
+
+  <!-- Card 4: Cost -->
+  <g transform="translate(428, 206)">
+    <rect x="0" y="0" width="108" height="74" rx="22" fill="#2B2930"/>
+    <text x="54" y="28" text-anchor="middle" fill="#CAC4D0" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" font-weight="700">COST</text>
+    <text x="54" y="54" text-anchor="middle" fill="#FFDCC1" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="18" font-weight="800">$0.00</text>
+  </g>
+</svg>

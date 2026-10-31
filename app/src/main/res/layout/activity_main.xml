@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF121316">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SW2 Token Monitor"
+            android:textColor="#FFFFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OpenChamber 桌面端 ⇄ 手机小组件 ⇄ SW2 手表"
+            android:textColor="#FF00D2FF"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- 局域网接收中枢状态卡片 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_preview_box"
+            android:padding="14dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📡 局域网接收服务 (在线)"
+                    android:textColor="#FF58FFB1"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PORT 8888"
+                    android:background="#3358FFB1"
+                    android:textColor="#FF58FFB1"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="1dp"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_network_endpoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="接收端点: http://192.168.0.11:8888/sync"
+                android:textColor="#FFFFFFFF"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:layout_marginTop="6dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="电脑有新 Token 产生时，自动通过 Wi-Fi 推送到此端点并唤醒手表。"
+                android:textColor="#FFA0A5B0"
+                android:textSize="11sp"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+
+        <!-- 手机端当前实时数据面板卡片 (新增) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_widget_box"
+            android:padding="16dp"
+            android:layout_marginBottom="18dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="📊 手机实时数据面板"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tv_phone_model"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="gemini-3.8-flash"
+                    android:textColor="#FFB388FF"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_phone_tokens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3,338.8 K"
+                android:textColor="#FF00F0FF"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:fontFamily="monospace"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="10dp" />
+
+            <!-- 四宫格详细数据 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_stat_badge"
+                    android:padding="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="INPUT"
+                        android:textColor="#FFA0A5B0"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_input"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="3.29M"
+                        android:textColor="#FF00D2FF"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_stat_badge"
+                    android:padding="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OUTPUT"
+                        android:textColor="#FFA0A5B0"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_output"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="41.5K"
+                        android:textColor="#FFFF007F"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_stat_badge"
+                    android:padding="6dp"
+                    android:layout_marginEnd="4dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CACHE"
+                        android:textColor="#FFA0A5B0"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_cache"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="33.5M"
+                        android:textColor="#FF58FFB1"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_stat_badge"
+                    android:padding="6dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="COST"
+                        android:textColor="#FFA0A5B0"
+                        android:textSize="10sp" />
+
+                    <TextView
+                        android:id="@+id/tv_phone_cost"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="$0.00"
+                        android:textColor="#FFFFD666"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- 手表双模状态预览区 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_preview_box"
+            android:padding="14dp"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⌚️ SW2 手表画面预览："
+                android:textColor="#FFFFFFFF"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+
+                <!-- 待机预览 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginEnd="6dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="待机：黑白反显"
+                        android:textColor="#FFA0A5B0"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_preview_aod"
+                        android:layout_width="140dp"
+                        android:layout_height="112dp"
+                        android:background="@drawable/bg_screen_bezel"
+                        android:padding="4dp"
+                        android:contentDescription="AOD State" />
+                </LinearLayout>
+
+                <!-- 亮屏预览 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal"
+                    android:layout_marginStart="6dp">
+
+                    <TextView
+                        android:id="@+id/tv_active_preview_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="点亮：当前彩色"
+                        android:textColor="#FF00D2FF"
+                        android:textSize="11sp"
+                        android:layout_marginBottom="4dp" />
+
+                    <ImageView
+                        android:id="@+id/iv_preview_active"
+                        android:layout_width="140dp"
+                        android:layout_height="112dp"
+                        android:background="@drawable/bg_screen_bezel"
+                        android:padding="4dp"
+                        android:contentDescription="Active State" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 亮屏主题选择区 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择点亮屏幕时的显示主题："
+            android:textColor="#FFFFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="10dp" />
+
+        <!-- 主题 1: 赛博霓虹蓝绿 -->
+        <LinearLayout
+            android:id="@+id/theme_card_cyber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:background="@drawable/bg_theme_selected"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="32dp"
+                android:background="#FF00D2FF"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_cyber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="赛博霓虹 (Cyber Neon) ✓"
+                    android:textColor="#FF00D2FF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="电光天蓝 Header + 荧光绿 Token 大字"
+                    android:textColor="#FFA0A5B0"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 主题 2: 幻境霓裳 (现代紫粉) -->
+        <LinearLayout
+            android:id="@+id/theme_card_synthwave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:background="@drawable/bg_theme_unselected"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="32dp"
+                android:background="#FFFF007F"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_synthwave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="幻境霓裳 (Synthwave Purple)"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="暗夜星云紫 + 荧光粉红 + 电光青 Token 大字"
+                    android:textColor="#FFA0A5B0"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 主题 3: 极光翡翠 (翠绿) -->
+        <LinearLayout
+            android:id="@+id/theme_card_aurora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:background="@drawable/bg_theme_unselected"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="10dp">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="32dp"
+                android:background="#FF10B981"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_aurora"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="极光翡翠 (Matrix Aurora)"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="黑客墨绿底 + 薄荷翠绿 + 冰透白绿大字"
+                    android:textColor="#FFA0A5B0"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 主题 4: 经典极简白金 -->
+        <LinearLayout
+            android:id="@+id/theme_card_mono"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="14dp"
+            android:background="@drawable/bg_theme_unselected"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="16dp">
+
+            <View
+                android:layout_width="12dp"
+                android:layout_height="32dp"
+                android:background="#FFFFFFFF"
+                android:layout_marginEnd="12dp" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_title_mono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="经典单色 (Classic Monochrome)"
+                    android:textColor="#FFFFFFFF"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="亮屏亦为黑白高对比，适合极简纯净阅读"
+                    android:textColor="#FFA0A5B0"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 一键同步推送到手表 -->
+        <Button
+            android:id="@+id/btn_push_watch"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="立即同步到手表 (Sync to SW2)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FF121316"
+            android:backgroundTint="#FF00D2FF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 展开配置面板按钮 -->
+        <Button
+            android:id="@+id/btn_toggle_config"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="⚙️ 配置在线 API (可选，留空走局域网同步)"
+            android:textColor="#FFA0A5B0"
+            android:backgroundTint="#FF22252C"
+            android:layout_marginBottom="12dp" />
+
+        <!-- 折叠的配置区域 -->
+        <LinearLayout
+            android:id="@+id/layout_config"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:padding="16dp"
+            android:background="#FF1C1E24"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="API Base URL (为空则直接接收电脑端推送):"
+                android:textColor="#FFCCD0D9"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_api_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="https://api.openai.com/v1"
+                android:textColor="#FFFFFFFF"
+                android:textColorHint="#FF666C78"
+                android:inputType="textUri"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="API Key (留空 = 局域网推送模式):"
+                android:textColor="#FFCCD0D9"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_api_key"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="留空即为电脑推送模式"
+                android:textColor="#FFFFFFFF"
+                android:textColorHint="#FF666C78"
+                android:inputType="textPassword"
+                android:layout_marginBottom="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="展示的模型名称:"
+                android:textColor="#FFCCD0D9"
+                android:textSize="13sp" />
+
+            <EditText
+                android:id="@+id/et_model_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="gemini-3.8-flash"
+                android:text="gemini-3.8-flash"
+                android:textColor="#FFFFFFFF"
+                android:textColorHint="#FF666C78"
+                android:layout_marginBottom="16dp" />
+
+            <Button
+                android:id="@+id/btn_save_config"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="保存配置"
+                android:textColor="#FFFFFFFF"
+                android:backgroundTint="#FF009688" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="状态: 局域网接收中 (支持电脑推送 / 手机小组件 / 手表联动)"
+            android:textColor="#FF58FFB1"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginTop="6dp" />
+
+    </LinearLayout>
+</ScrollView>

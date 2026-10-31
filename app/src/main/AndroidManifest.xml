@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.sonyericsson.extras.liveware.aef.EXTENSION_PERMISSION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".TokenExtensionService" />
+
+        <!-- 索尼 SmartWatch 2 广播接收器 -->
+        <receiver
+            android:name=".TokenExtensionReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.sonyericsson.extras.liveware.aef.registration.EXTENSION_REGISTER_REQUEST" />
+                <action android:name="com.sonyericsson.extras.liveware.aef.registration.ACCESSORY_CONNECTION" />
+                <action android:name="android.intent.action.LOCALE_CHANGED" />
+                <action android:name="com.sonyericsson.extras.aef.control.START" />
+                <action android:name="com.sonyericsson.extras.aef.control.STOP" />
+                <action android:name="com.sonyericsson.extras.aef.control.PAUSE" />
+                <action android:name="com.sonyericsson.extras.aef.control.RESUME" />
+                <action android:name="com.sonyericsson.extras.aef.control.ERROR" />
+                <action android:name="com.sonyericsson.extras.aef.control.KEY_EVENT" />
+                <action android:name="com.sonyericsson.extras.aef.control.TOUCH_EVENT" />
+                <action android:name="com.sonyericsson.extras.aef.control.ACTIVE_POWER_SAVE_MODE_STATUS_CHANGED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 系统级精确定时器广播 (允许 exported 便于测试与自唤醒) -->
+        <receiver
+            android:name=".PeriodicUpdateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.tokenmonitor.sw2.ACTION_PERIODIC_TICK" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 安卓桌面小组件 (AppWidget) -->
+        <receiver
+            android:name=".TokenAppWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/token_widget_info" />
+        </receiver>
+
+    </application>
+
+</manifest>
