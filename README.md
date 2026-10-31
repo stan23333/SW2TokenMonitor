@@ -9,7 +9,12 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Platform-Android%204.0%20--%2015%2B-blue?style=flat-square" alt="Android" />
+  <a href="https://github.com/stan23333/SW2TokenMonitor/releases/latest">
+    <img src="https://img.shields.io/github/v/release/stan23333/SW2TokenMonitor?color=blue&style=flat-square" alt="Latest Release" />
+  </a>
+  <a href="https://github.com/stan23333/SW2TokenMonitor/releases/download/v1.0.0/SW2TokenMonitor-v1.0.0.apk">
+    <img src="https://img.shields.io/badge/Download-APK-success?style=flat-square&logo=android" alt="Download APK" />
+  </a>
   <img src="https://img.shields.io/badge/Accessory-Sony%20SmartWatch%202%20(SW2)-00D2FF?style=flat-square" alt="SW2" />
   <img src="https://img.shields.io/badge/OpenCode%20/%20OpenChamber-Native%20Plugin-green?style=flat-square" alt="OpenCode" />
   <img src="https://img.shields.io/badge/UI-Material%20Design%203%20(Material%20You)-7928CA?style=flat-square" alt="M3" />
@@ -162,20 +167,18 @@ Pair your Sony SmartWatch 2 with your phone via NFC or standard Bluetooth settin
 
 ---
 
-### Step 2: Build & Install the SW2 Token Monitor APK
+### Step 2: Install SW2 Token Monitor APK
 
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/<your-username>/SW2TokenMonitor.git
-   cd SW2TokenMonitor
-   ```
-2. Build and install debug APK using Gradle:
-   ```bash
-   ./gradlew assembleDebug
-   adb install -r -d app/build/outputs/apk/debug/app-debug.apk
-   ```
-3. Open **SW2 Token Monitor** on your phone.
-4. Note the endpoint displayed at the top: `http://<phone-ip>:8888/sync`.
+You can directly download the pre-compiled APK from GitHub Releases:
+
+👉 **[Download SW2TokenMonitor-v1.0.0.apk](https://github.com/stan23333/SW2TokenMonitor/releases/download/v1.0.0/SW2TokenMonitor-v1.0.0.apk)**
+
+Install it to your device:
+```bash
+adb install -r -d SW2TokenMonitor-v1.0.0.apk
+```
+
+*(Alternatively, build from source using `./gradlew assembleDebug`)*
 
 ---
 
@@ -225,6 +228,7 @@ Pair your Sony SmartWatch 2 with your phone via NFC or standard Bluetooth settin
 - **Language**: Java 17 / Android SDK Platform 34 (UpsideDownCake)
 - **Architecture**: Modernized refactor of the original 2013 `Sony Add-on SDK 3.0` (`smartExtensionAPI` and `smartExtensionUtils`) into standard standalone Gradle AAR modules.
 - **Networking**: Lightweight embedded multi-threaded HTTP socket server.
+- **CI/CD**: GitHub Actions workflow (`.github/workflows/build-release.yml`) for automated cloud APK builds & releases.
 - **OpenCode Plugin**: Node.js ES-Module hook capturing SQLite database delta statistics (`~/.local/share/opencode/opencode.db`).
 
 ---
